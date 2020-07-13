@@ -1,0 +1,27 @@
+﻿@model UnitTestingAspNetCoreMVCApplication.Models.BasketViewModel
+@{
+    ViewData["Title"] = "Checkout";
+}
+
+<h1>Thanks for Your Order. Please see Order Details below</h1>
+
+<div class="container">
+    <a class="btn-primary" id="MoveBack" asp-controller="Product" asp-action="Listing">Back To Product Listing</a>
+    <ul class="list-group">
+        @foreach (var product in Model.Basket)
+        {
+            <li class="list-group-item">
+
+                <div>ProductID: @product.ProductID</div>
+                <div>ProductName: @product.ProductName</div>
+                <div>ProductCategory: @product.ProductCategory</div>
+                <div>ProductDescription: @product.ProductDescription</div>
+
+            </li>
+        }
+
+    </ul>
+
+
+</div>
+

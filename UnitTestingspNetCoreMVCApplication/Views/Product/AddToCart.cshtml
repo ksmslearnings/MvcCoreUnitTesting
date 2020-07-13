@@ -1,0 +1,18 @@
+﻿@model UnitTestingAspNetCoreMVCApplication.Models.ProductViewModel;
+@{
+    ViewData["Title"] = "AddToCart";
+}
+
+<div class="alert-primary">Item Added to you basket </div>
+
+<div>ProductID: @Model.ProductID</div>
+<div>ProductName: @Model.ProductName</div>
+<div>ProductCategory: @Model.ProductCategory</div>
+<div>ProductDescription: @Model.ProductDescription</div>
+<a class="btn-primary" id="MoveBack" asp-controller="Product" asp-action="Listing">Back To Product Listing</a>
+<a class="btn-primary" id="Checkout" asp-controller="Product" asp-action="Checkout">Checkout and Buy</a>
+
+
+
+
+

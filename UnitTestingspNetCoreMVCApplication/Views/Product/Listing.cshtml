@@ -1,0 +1,33 @@
+﻿@model List<UnitTestingAspNetCoreMVCApplication.Models.ProductViewModel>
+
+@{
+
+    ViewData["Title"] = "Listing";
+}
+
+
+<h1>Product Listing</h1>
+
+<ul class="list-group">
+    @foreach (var product in Model)
+    {
+    <li class="list-group-item">
+
+        <div>ProductID: @product.ProductID</div>
+        <div>ProductName: @product.ProductName</div>
+        <div>ProductCategory: @product.ProductCategory</div>
+        <div>ProductDescription: @product.ProductDescription</div>
+        <div>@product.AvailablityStatus</div>
+
+        @if (product.Available > 0)
+        {
+        <a class="btn-primary" asp-area="" asp-controller="Product" asp-action="AddToCart" asp-route-productid="@product.ProductID">Add To Cart</a>
+        }
+
+    </li>
+    }
+   
+</ul>
+
+
+

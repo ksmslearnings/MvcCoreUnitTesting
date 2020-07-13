@@ -1,0 +1,15 @@
+﻿@model UnitTestingAspNetCoreMVCApplication.Models.BasketViewModel
+
+@foreach (var p in Model.Basket)
+{
+    <div class="container">
+        <div>@p.ProductID</div>
+        <div>@p.ProductName</div>
+        <div>@p.ProductCategory</div>
+        <div>@p.ProductDescription</div>
+    </div>
+
+}
+
+
+
